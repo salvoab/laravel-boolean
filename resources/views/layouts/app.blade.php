@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Blog con Database | @yield('title')</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -20,8 +20,9 @@
                 margin: 0;
             }
 
-            .full-height {
-                height: 100vh;
+            .container {
+                width: 75%;
+                margin: auto;
             }
 
             .flex-center {
@@ -30,25 +31,7 @@
                 justify-content: center;
             }
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
+            a {
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
@@ -58,12 +41,23 @@
                 text-transform: uppercase;
             }
 
-            .m-b-md {
-                margin-bottom: 30px;
+            .mt-md {
+                margin-top: 30px;
             }
         </style>
     </head>
     <body>
-        @yield('content')
+        <header>
+            <nav class="flex-center mt-md">
+                <a href="/">Home</a>
+                <a href="about">About</a>
+                <a href="blog">Blog</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            @yield('content')
+        </div>
+
     </body>
 </html>
